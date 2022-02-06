@@ -1,14 +1,31 @@
 /*usar el siguiente codigo en todos los proyectos.*/
+/*propiedades customizadas*/
+:root{
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario:#ffc107;
+    --secundario:#0097A7;
+    --gris:#757575;
+
+    --fuente: 'Krub', sans-serif;
+}
 html{
     font-size: 62.5%;
+    font-family: var(--fuente);
 }
 body{
     font-size: 16px;
 }
-h1{
+
+
+/**************************************************/
+
+.titulo{
     text-align: center;
     font-size: 3.8rem;/** 1rem = 10px**/
+
+    font-weight: 400;
 }
-span{
+.titulo span{
     font-size: 2rem;
 }
