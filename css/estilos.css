@@ -9,29 +9,59 @@
 
     --fuente: 'Krub', sans-serif;
 }
+/*evita el modelo caja haciendo que el pading y 
+el tamaño de un elemento no se sume y solo quede el tamaño del elemento*/
 html{
     font-size: 62.5%;
-    font-family: var(--fuente);
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;
+    font-family:var(--fuente);
 }
 
 /**************************************************/
-
-.titulo{
-    text-align: center;
+.h1{
     font-size: 3.8rem;/** 1rem = 10px**/
-
-    font-weight: 400;
 }
-.titulo span{
+.h2{
+    font-size: 2.8rem;/** 1rem = 10px**/
+}
+.h3{
+    font-size: 1.8rem;/** 1rem = 10px**/
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+ 
+span{
     font-size: 2rem;
 }
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
-   
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+ @media (min-width: 768px){
+    .boton{
+    width: auto;
+    }
 }
 .nav-bg{
     background-color: var(--secundario);
@@ -61,4 +91,37 @@ body{
     background-color: var(--primario);
     color: var(--oscuro);
 }
- 
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+  
+    position: relative;
+   
+}
+
+.contenido__hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+
+/*alinea vertical y horizontalmente con
+vertical con align-items
+horizontal con justify-content
+*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenido__hero p,.contenido__hero h2{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
