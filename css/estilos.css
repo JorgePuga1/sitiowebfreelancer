@@ -165,7 +165,8 @@ horizontal con justify-content
 }
 .servicio,
 .navegacion-principal,
-.formulario{
+.formulario,
+.footer{
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
